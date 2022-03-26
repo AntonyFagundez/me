@@ -8,7 +8,7 @@ const context = canvas.getContext("2d") as CanvasRenderingContext2D;
 // canvas responsive
 const { width, height } = getComputedStyle(canvas);  
 
-canvas.width = parseInt(width);
+canvas.width = parseInt(width) + 32;
 canvas.height = parseInt(height);
 const fontSize = 16;
 
