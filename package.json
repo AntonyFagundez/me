@@ -1,5 +1,5 @@
 {
-  "name": "console",
+  "name": "matrix",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -13,5 +13,8 @@
     "eslint": "^8.12.0",
     "typescript": "^4.5.4",
     "vite": "^2.8.0"
+  },
+  "author": {
+    "name": "Antony Fagundez"
   }
 }
