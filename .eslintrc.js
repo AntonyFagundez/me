@@ -1,37 +1,62 @@
+/** @type {import("eslint").ESLint.Options} */
 module.exports = {
   env: {
-    browser: true,
+    commonjs: true,
     es2021: true,
-    node: true
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  parser: "@typescript-eslint/parser",
+  extends: ["plugin:prettier/recommended"],
   parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module"
+    ecmaVersion: 12,
   },
-  plugins: [
-    "@typescript-eslint"
-  ],
+  parser: "@typescript-eslint/parser",
+  plugins: ["prettier", "import", "@typescript-eslint"],
   rules: {
-    indent: [
+    "import/order": ["warn", { "newlines-between": "always" }],
+    quotes: ["error", "double"],
+    semi: ["error", "always"],
+    "no-console": "warn",
+    "prettier/prettier": [
       "error",
-      2
+      {
+        singleQuote: false,
+        traillingComma: "all",
+        semi: true,
+        tabWidth: 2,
+        printWidth: 100,
+        bracketSpacing: true,
+        arrowParens: "always",
+        endOfLine: "auto",
+      },
     ],
-    "linebreak-style": [
-      "error",
-      "unix"
+    "no-unused-vars": [
+      "warn",
+      {
+        args: "after-used",
+        ignoreRestSiblings: true,
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+      },
     ],
-    quotes: [
+    "padding-line-between-statements": [
       "error",
-      "double"
+      { blankLine: "always", prev: "*", next: "return" },
+      { blankLine: "always", prev: ["const", "let", "var"], next: "*" },
+      {
+        blankLine: "any",
+        prev: ["const", "let", "var"],
+        next: ["const", "let", "var"],
+      },
     ],
-    semi: [
-      "error",
-      "always"
-    ]
-  }
+    "no-debugger": "warn",
+  },
+  ignorePatterns: [
+    "node_modules",
+    "storybook-static",
+    "dist",
+    ".next",
+    "coverage",
+    "build",
+    "public",
+    "__snapshots__",
+  ],
 };
