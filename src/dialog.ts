@@ -11,7 +11,7 @@ const main = document.getElementById("main") as HTMLElement;
 // subscribeKey(store, "openDialog", () => dialog.open = store.openDialog)
 
 subscribeKey(store.dialog, "isOpen", (value) => {
-  if (store.dialog.isOpen) {
+  if (value) {
     button.style.display = "none";
   } else {
     button.style.display = "block";
