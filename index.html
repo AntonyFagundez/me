@@ -3,13 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Experience and information about Antony Fagundez" />
     <title>Antony Fagundez | Matrix</title>
     <link rel="icon" href="/matrix/assets/AF.ef30914f.ico" type="image/ico" />
-    <script type="module" crossorigin src="/matrix/assets/index.f2ab192d.js"></script>
-    <link rel="stylesheet" href="/matrix/assets/index.e26723a9.css">
+    <link
+    rel="preload"
+    href="/matrix/assets/LcdSolid-VPzB.bbd3a61b.ttf"
+    as="font"
+    type="font/ttf"
+    crossOrigin="anonymous"
+    />
+    <script type="module" crossorigin src="/matrix/assets/index.985acba2.js"></script>
+    <link rel="modulepreload" href="/matrix/assets/vendor.2be0daf6.js">
+    <link rel="stylesheet" href="/matrix/assets/index.ec898214.css">
   </head>
-  <body>
-    <canvas id="matrix"></canvas>
+  <body class="crt" style="background-color: black;">
+    <canvas class="crt" id="matrix"></canvas>
     
+    <main class="main" id="main">
+      <button id="init-button" class="glow glow-shadow"><h3>¿Iniciar?</h3></button>
+      <dialog id="dialog"  class="">
+        <div id="actions"><button id="close-dialog" title="Close Dialog">X</button></div>
+        <section id="menu">
+          <table id="command-table" data-disable-animation>
+            <thead>
+              <tr>
+                <td colspan="2">
+                  PRINCIPAL MENU
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  COMMAND
+                </td>
+                <td>
+                  ARGS
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  about
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  exp
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  goto
+                </td>
+                <td>
+                  --linkedin --github
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  cls | clear
+                </td>
+                <td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="input-box" id="input-box">
+            <span class="prefix">antonyfagundez /></span>
+            <input type="text" placeholder="about" id="input-command"/>
+          </div>
+        </section>
+      </dialog>
+    </main>
   </body>
 </html>
