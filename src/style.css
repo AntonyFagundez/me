@@ -19,7 +19,6 @@
        url('/assets/lcdsolid-vpzb-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
 
 
@@ -29,6 +28,7 @@ html, body, #matrix {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-family: 'lcd_solidregular'
 }
 
 #matrix {
@@ -43,12 +43,6 @@ html, body, #matrix {
   height: auto;
   width: auto;
   z-index: var(--main-z-index);
-  /* min-width: 100%;
-  min-height: 100%; */
-  /* display: flex;
-  justify-content: center;
-   align-items: center; */
-
 }
 
 .main > * {
@@ -63,64 +57,6 @@ html, body, #matrix {
   top: 50vh;
   left: 50vw;
   margin: 0px 0 0 -55px;
-}
-#dialog {
-  background-color: var(--background-color);
-  padding: 0;
-  color: var(--green-4);
-  box-shadow: var(--green-4) 0px 0px 15px;
-  overflow:auto;
-  resize:both;
-  min-height:10px;
-}
-
-#dialog section {
-  padding: 1rem;
-  max-height: 55vh;
-  overflow-y: auto;
-}
-
-#actions {
-  border: inherit;
-  cursor:  move;
-}
-
-#actions button {
-  border: inherit;
-  background-color: inherit;
-  color: var(--green-4);
-  border-width: thin;
-
-  cursor: pointer;
-}
-
-
-.input-box {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  background: inherit;
-  border: none;
-  overflow: hidden;
-}
-
-.input-box .prefix {
-  font-weight: 300;
-  font-size: 14px;
-  color: white;
-}
-
-.input-box input {
-  flex-grow: 1;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  padding: 0.5rem;
-  background-color: inherit;
-  color: white;
-
-  caret-shape: underscore;
-  caret-color: var(--green-3); 
 }
 
 #command-table {

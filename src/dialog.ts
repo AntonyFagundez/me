@@ -4,6 +4,8 @@ import { dragElement } from "./draggable";
 import { InputManager } from "./InputManager";
 import { store } from "./store";
 
+import "./dialog.css";
+
 const button = document.getElementById("init-button") as HTMLButtonElement;
 const dialog = document.getElementById("dialog") as HTMLDialogElement;
 const main = document.getElementById("main") as HTMLElement;
@@ -31,10 +33,7 @@ subscribeKey(store.dialog, "isOpen", (value) => {
 
     new InputManager();
 
-    dragElement(
-      document.getElementById("dialog") as HTMLElement,
-      document.getElementById("actions") as HTMLDivElement
-    );
+    dragElement(document.getElementById("dialog") as HTMLElement, document.getElementById("actions") as HTMLDivElement);
   }
 });
 

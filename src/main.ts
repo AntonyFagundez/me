@@ -1,10 +1,11 @@
 import "./animation.css";
-import "./canvas";
 import "./dialog";
-import "./draggable";
+import { DrawCanvas } from "./DrawCanvas";
 import "./InputManager";
 import "./style.css";
 
-function main() {}
+function main() {
+  DrawCanvas();
+}
 
 main();

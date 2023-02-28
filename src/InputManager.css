@@ -1,0 +1,28 @@
+.input-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: inherit;
+    border: none;
+    overflow: hidden;
+}
+
+.input-box .prefix {
+    font-weight: 300;
+    font-size: 14px;
+    color: white;
+    min-width: 150px;
+}
+
+.input-box input {
+    flex-grow: 1;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    background-color: inherit;
+    color: white;
+
+    caret-shape: underscore;
+    caret-color: var(--green-3);
+}

@@ -1,7 +1,7 @@
 import alphabet from "./alphabet";
 import { DARKEST_COLOR, PALLETE_MATRIX } from "./colors";
 
-(function () {
+export function DrawCanvas() {
   var rainDrops: any[] = [];
   var canvas = document.getElementById("matrix") as HTMLCanvasElement;
   var context = canvas.getContext("2d") as CanvasRenderingContext2D;
@@ -62,4 +62,4 @@ import { DARKEST_COLOR, PALLETE_MATRIX } from "./colors";
   };
 
   setInterval(draw, 50);
-})();
+}

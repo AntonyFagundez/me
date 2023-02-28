@@ -1,4 +1,3 @@
-
 export default {
-  base: "/matrix/"
+  base: "/matrix/",
 };

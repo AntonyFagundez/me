@@ -1,10 +1,9 @@
 /** @type {import("eslint").ESLint.Options} */
 module.exports = {
   env: {
-    commonjs: true,
     es2021: true,
   },
-  extends: ["plugin:prettier/recommended"],
+  extends: ["plugin:prettier/recommended", "plugin:import/typescript"],
   parserOptions: {
     ecmaVersion: 12,
   },
@@ -14,6 +13,8 @@ module.exports = {
     "import/order": ["warn", { "newlines-between": "always" }],
     quotes: ["error", "double"],
     semi: ["error", "always"],
+    //To avoid problems with prettier extension
+    indent: "off",
     "no-console": "warn",
     "prettier/prettier": [
       "error",
@@ -22,7 +23,7 @@ module.exports = {
         traillingComma: "all",
         semi: true,
         tabWidth: 2,
-        printWidth: 100,
+        printWidth: 150,
         bracketSpacing: true,
         arrowParens: "always",
         endOfLine: "auto",
@@ -47,16 +48,6 @@ module.exports = {
         next: ["const", "let", "var"],
       },
     ],
-    "no-debugger": "warn",
   },
-  ignorePatterns: [
-    "node_modules",
-    "storybook-static",
-    "dist",
-    ".next",
-    "coverage",
-    "build",
-    "public",
-    "__snapshots__",
-  ],
+  ignorePatterns: ["node_modules", "storybook-static", "dist", ".next", "coverage", "build", "public", "__snapshots__"],
 };
