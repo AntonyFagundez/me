@@ -9,10 +9,10 @@ export class InputManager {
   private readonly _lang: AllowedLanguages;
   private counter: number = 0;
 
-  constructor() {
+  constructor(input?: HTMLInputElement, container?: HTMLDivElement) {
     this._lang = isKnowLanguage(navigator.language) ? navigator.language : "en";
-    this._inputBox = document.getElementById("input-box") as HTMLDivElement;
-    this._input = document.getElementById("input-command") as HTMLInputElement;
+    this._inputBox = container ?? (document.getElementById("input-box") as HTMLDivElement);
+    this._input = input ?? (document.getElementById("input-command") as HTMLInputElement);
     this.addListener();
   }
 
