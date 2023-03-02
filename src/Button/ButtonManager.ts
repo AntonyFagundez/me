@@ -6,9 +6,11 @@ import { TEXTS } from "../texts";
 
 export default class ButtonManager {
   _element: HTMLButtonElement;
+  _container: HTMLDivElement;
 
-  constructor(button?: HTMLButtonElement) {
+  constructor(button?: HTMLButtonElement, container?: HTMLDivElement) {
     this._element = button ?? (document.getElementById("init-button") as HTMLButtonElement);
+    this._container = container ?? (document.getElementById("container-button") as HTMLDivElement);
     this.prepare();
   }
 
@@ -36,5 +38,6 @@ export default class ButtonManager {
     this.setText(text);
 
     this._element.style.display = state.dialog.isOpen ? "none" : "block";
+    this._container.style.display = state.dialog.isOpen ? "none" : "grid";
   }
 }

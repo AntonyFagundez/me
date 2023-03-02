@@ -47,22 +47,35 @@ export const TEXTS: Command = {
 };
 
 export const TABLE_TEXTS: ITableTextUI = {
-  about: {},
-  exp: {},
+  about: {
+    description: {
+      en: "More about me",
+      es: "Más acerca de mi",
+    },
+  },
+  exp: {
+    description: {
+      en: "Experience",
+      es: "Experiencia",
+    },
+  },
   "change-lng": {
     description: {
       en: "Change language to spanish",
-      es: "Cambiar lenguaje a ingles",
+      es: "Cambiar lenguaje a inglés",
     },
   },
   goto: {
     args: ["--linkedin", "--github"],
+    description: {
+      en: "Open in a new Tab",
+      es: "Abrir en nueva ventana",
+    },
   },
-  contact: {},
   "cls | clear": {
     description: {
-      en: "Clear all window",
-      es: "Limpiar la ventana",
+      en: "Clear the console",
+      es: "Limpiar la consola",
     },
   },
 };

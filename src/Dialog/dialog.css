@@ -6,7 +6,13 @@
     overflow: auto;
     resize: both;
     min-height: 10px;
-    min-width: 570px;
+    min-width: 70%;
+}
+
+@media (min-width: 768px) {
+    #dialog {
+        min-width: 570px;
+    }
 }
 
 #dialog section {

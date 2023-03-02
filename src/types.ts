@@ -4,7 +4,7 @@ export type AllowedLanguages = "es" | "en";
 
 export type TextUI = Record<AllowedLanguages, string>;
 
-export type InfoCommands = "about" | "contact" | "exp";
+export type InfoCommands = "about" | "exp";
 export type UICommands = "change-lng";
 export type ClearCommands = "cls" | "clear";
 export type AllowedPage = "linkedin" | "github";

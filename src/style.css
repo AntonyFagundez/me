@@ -46,7 +46,7 @@ html, body, #matrix {
 }
 
 .main > * {
-  font-family: "lcd_solidregular"
+  font-family: "lcd_solidregular";
 }
 
 #command-table {

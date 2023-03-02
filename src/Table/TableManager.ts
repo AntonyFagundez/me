@@ -3,9 +3,11 @@ import { subscribeKey } from "valtio/utils";
 import { store } from "../store";
 import { TABLE_TEXTS } from "../texts";
 import { TextUI } from "../types";
+import { isMobile } from "../utils";
 
 export default class TableManager {
   private _table = document.createElement("table");
+  private _shouldRenderDescription: boolean;
   private contextText: Record<string, TextUI> = {
     principalText: {
       en: "PRINCIPAL MENU",
@@ -26,6 +28,7 @@ export default class TableManager {
   };
   constructor(table: HTMLTableElement) {
     this._table = table;
+    this._shouldRenderDescription = !isMobile();
     this.renderTable();
     this.addListener();
   }
@@ -35,7 +38,7 @@ export default class TableManager {
     <tr>
          <td>${name}</td>
          <td>${args?.join("<br/>")}</td>
-         <td>${description}</td>
+         ${this._shouldRenderDescription ? `<td>${description}</td>` : ""}
     </tr>`;
   }
   renderBody() {
@@ -65,9 +68,9 @@ export default class TableManager {
         <td>
         ${this.contextText.arguments[store.lang]}
         </td>
-        <td>
-        ${this.contextText.description[store.lang]}
-        </td>
+
+        ${this._shouldRenderDescription ? `<td>${this.contextText.description[store.lang]}</td>` : ""}
+
       </tr>
     </thead>
     <tbody id="table-body">
@@ -75,6 +78,7 @@ export default class TableManager {
   }
 
   renderTable() {
+    this._shouldRenderDescription = !isMobile();
     this.renderHead();
     this.renderBody();
   }
