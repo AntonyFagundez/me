@@ -1,7 +1,7 @@
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-  base: "/matrix/",
+  base: "/me/",
   test: {
     environment: "jsdom",
   },
