@@ -1,4 +1,4 @@
-import type { Command } from "./types";
+import type { Command, ITableTextUI } from "./types";
 
 export const TEXTS: Command = {
   about: {
@@ -35,5 +35,34 @@ export const TEXTS: Command = {
   "goto --github": {
     es: "Abriendo en otra pestaña",
     en: "Opening in a new window",
+  },
+  start: {
+    es: "Iniciar",
+    en: "Start",
+  },
+  "change-lng": {
+    en: "Lenguaje cambiado a español",
+    es: "Changed language to english",
+  },
+};
+
+export const TABLE_TEXTS: ITableTextUI = {
+  about: {},
+  exp: {},
+  "change-lng": {
+    description: {
+      en: "Change language to spanish",
+      es: "Cambiar lenguaje a ingles",
+    },
+  },
+  goto: {
+    args: ["--linkedin", "--github"],
+  },
+  contact: {},
+  "cls | clear": {
+    description: {
+      en: "Clear all window",
+      es: "Limpiar la ventana",
+    },
   },
 };

@@ -1,8 +1,17 @@
 import { proxy } from "valtio";
 import { devtools } from "valtio/utils";
 
-export const store = proxy({
-  selectedLanguage: "es",
+import { AllowedLanguages } from "./types";
+
+export interface IStore {
+  lang: AllowedLanguages;
+  dialog: {
+    isOpen: boolean;
+  };
+}
+
+export const store = proxy<IStore>({
+  lang: navigator.language as AllowedLanguages,
   dialog: {
     isOpen: false,
   },

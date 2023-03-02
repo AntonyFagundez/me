@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, it } from "vitest";
 
-import { InputManager } from "../InputManager";
+import { InputManager } from "../Input/InputManager";
 
 // The two tests marked with concurrent will be run in parallel
 describe("InputManager()", () => {
