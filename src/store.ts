@@ -11,7 +11,7 @@ export interface IStore {
 }
 
 export const store = proxy<IStore>({
-  lang: (navigator.language as AllowedLanguages) ?? "en",
+  lang: "en",
   dialog: {
     isOpen: false,
   },
